@@ -9,3 +9,8 @@ Implementation of various Deep Reinforcement Learning algorithms using Python an
 ### Box2d
   * [LunarLander-v2](https://www.gymlibrary.dev/environments/box2d/lunar_lander/) using
     * [DQN](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/Deep_Q_Network_jupyter)
+   
+## Gymnasium Environments
+### Toy Text
+  * [Blackjack-v1](https://gymnasium.farama.org/environments/toy_text/blackjack/) using
+    * [Monte Carlo](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/Monte_Carlo_jupyter)
