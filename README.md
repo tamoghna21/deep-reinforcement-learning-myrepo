@@ -6,6 +6,8 @@ Implementation of various Deep Reinforcement Learning algorithms using Python an
 ### Classic Control
   * [Acrobot-v1](https://www.gymlibrary.dev/environments/classic_control/acrobot/) using
     * [DQN](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/Deep_Q_Network_jupyter)
+  * [Cart Pole-v1](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) using
+     * [REINFORCE](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/REINFORCE)
 ### Box2d
   * [LunarLander-v2](https://www.gymlibrary.dev/environments/box2d/lunar_lander/) using
     * [DQN](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/Deep_Q_Network_jupyter)
