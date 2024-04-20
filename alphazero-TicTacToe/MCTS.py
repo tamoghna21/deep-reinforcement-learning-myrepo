@@ -1,8 +1,6 @@
 # MCTS algorithm
 
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 from copy import copy
 from math import *
 import random
