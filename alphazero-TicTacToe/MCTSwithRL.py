@@ -103,7 +103,7 @@ class Node:
         # if game is won/loss/draw
         if self.game.score is not None:
             self.V = self.game.score*self.game.player
-            self.U = 0 if self.game.score is 0 else self.V*float('inf')
+            self.U = 0 if self.game.score == 0 else self.V*float('inf')
 
         # link to previous node
         self.mother = mother
