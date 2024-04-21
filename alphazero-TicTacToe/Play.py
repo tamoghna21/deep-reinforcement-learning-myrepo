@@ -32,7 +32,7 @@ class Play:
         else:
             figsize=(self.game.w/2.1, self.game.h/2.1)
 
-        
+        plt.clf()
         self.fig=plt.figure(name, figsize=figsize)
         if self.game.w * self.game.h <25:
             self.fig.subplots_adjust(.2,.2,1,1)
@@ -58,7 +58,7 @@ class Play:
 
         # fully AI game
         if self.player1 is not None and self.player2 is not None:
-            self.anim = FuncAnimation(self.fig, self.draw_move, frames=self.move_generator, interval=500, repeat=False)
+            self.anim = FuncAnimation(self.fig, self.draw_move, frames=self.move_generator, interval=500, repeat=False,cache_frame_data=False)
             return
         
         # at least one human

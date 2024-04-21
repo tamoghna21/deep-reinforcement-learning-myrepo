@@ -40,7 +40,8 @@ class Policy(nn.Module):
         #print('a: ',a)
         # availability of moves
         avail = (torch.abs(x.squeeze())!=1).type(torch.FloatTensor)
-        avail = avail.view(-1, 9) # view returns a new tensor with the same data as the self tensor but of a different shape.
+        #avail = avail.view(-1, 9) # view returns a new tensor with the same data as the self tensor but of a different shape.
+        avail = avail.reshape(-1, 9) # view returns a new tensor with the same data as the self tensor but of a different shape.
         
         # locations where actions are not possible, we set the prob to zero
         # Note: 1) This is a modified softmax calculation, instead of exp(a), here exp(a-maxa) is calculated to avoid blowup
