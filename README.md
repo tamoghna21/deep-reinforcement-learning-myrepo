@@ -2,6 +2,9 @@
 
 Implementation of various Deep Reinforcement Learning algorithms using Python and Pytorch
 
+## Monte Carlo Tree Search guided by Actor Critic Agent
+* [Tic-Tac-Toe](https://github.com/tamoghna21/deep-reinforcement-learning-python-pytorch/tree/main/alphazero-TicTacToe)
+
 ## OpenAI Gym Environments
 ### Classic Control
   * [Acrobot-v1](https://www.gymlibrary.dev/environments/classic_control/acrobot/) using
