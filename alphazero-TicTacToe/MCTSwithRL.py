@@ -118,10 +118,13 @@ class Node:
 
         children = { tuple(a):Node(g, self, p) for a,g,p in zip(actions, games, probs) }
         #print(children)
-        #for a,c in children.items():
-            #print("a: ",a)
-            #print("c.U: ", c.U)
-            #print("c.game.state: ", c.game.state)
+        for ac,node in children.items():
+            if isnan(node.U):
+                print("Abnormal condition inside create children")
+                print("ac: ",ac)
+                print("node.game.state: ", node.game.state)
+                print("self.game.state: ", self.game.state)
+                
         self.children = children
         
     def explore(self, policy):
@@ -141,11 +144,22 @@ class Node:
             while current.children and current.outcome is None:
             
                 children = current.children
-                max_U = max(c.U for c in children.values())# values() method of a dictionary returns only the values(not the keys) of
+                max_U = max(node.U for node in children.values())# values() method of a dictionary returns only the values(not the keys) of
                                                      # a dictionary, as a list.
-                                                     # Therefore, c.U is actually a child node.U
+                                                     # Therefore, node.U is actually a child node.U
                 #print("current max_U ", max_U) 
-                actions = [ a for a,c in children.items() if c.U == max_U ]
+                actions = [ a for a,node in children.items() if node.U == max_U ]
+                
+                if not actions:
+                    #actions list is empty
+                    print("Abnormal condition- actions list is empty")
+                    print("max_U ", max_U)
+                    print("current.outcome: ", current.outcome)
+                    print("current.game.state: ", current.game.state)
+                    for node in children.values():
+                        print("node.U: ", node.U)
+                        print("node.game.state: ", node.game.state)
+                        print("node.game.score: ",node.game.score)
             
                 action = random.choice(actions)            
                 #print("chosen action: ",action)
@@ -212,10 +226,10 @@ class Node:
 
         
         # if there are winning moves, just output those
-        max_U = max(c.U for c in children.values())
+        max_U = max(node.U for node in children.values())
 
         if max_U == float("inf"):
-            prob = torch.tensor([ 1.0 if c.U == float("inf") else 0 for c in children.values()], device=device)
+            prob = torch.tensor([ 1.0 if node.U == float("inf") else 0 for node in children.values()], device=device)
             
         else:
             # divide things by maxN for numerical stability
