@@ -12,7 +12,6 @@ class Policy(nn.Module):
     def __init__(self):
         super(Policy, self).__init__()
         
-        # solution
         self.conv = nn.Conv2d(1, 16, kernel_size=2, stride=1, bias=False)
         self.size = 2*2*16
         self.fc = nn.Linear(self.size,32)
