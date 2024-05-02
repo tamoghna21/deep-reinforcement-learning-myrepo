@@ -118,6 +118,13 @@ class Node:
 
         children = { tuple(a):Node(g, self, p) for a,g,p in zip(actions, games, probs) }
         #print(children)
+        for ac,node in children.items():
+            if isnan(node.U):
+                print("Abnormal condition inside create children")
+                print("ac: ",ac)
+                print("node.game.state: ", node.game.state)
+                print("self.game.state: ", self.game.state)
+                
         self.children = children
         
     def explore(self, policy):
@@ -143,6 +150,17 @@ class Node:
                 #print("current max_U ", max_U) 
                 actions = [ a for a,node in children.items() if node.U == max_U ]
                 
+                if not actions:
+                    #actions list is empty
+                    print("Abnormal condition- actions list is empty")
+                    print("max_U ", max_U)
+                    print("current.outcome: ", current.outcome)
+                    print("current.game.state: ", current.game.state)
+                    for node in children.values():
+                        print("node.U: ", node.U)
+                        print("node.game.state: ", node.game.state)
+                        print("node.game.score: ",node.game.score)
+            
                 action = random.choice(actions)            
                 #print("chosen action: ",action)
             
