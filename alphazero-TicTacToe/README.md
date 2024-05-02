@@ -7,8 +7,8 @@ Each AI player is based on Monte Carlo Tree search guided by a Deep RL agent. Th
 
 ### Notebooks
 * 1.TictacToe - game setup & GUI.ipynb : Game setup and general familiarization.
-* 2.MCTS_TicTacToe.ipynb : To play Tic-Tac_toe 3x3 by classic MCTS
-* 3.alphazero-TicTacToe.ipynb : Training of an RL agent to play 3x3 Tic-Tac_Toe
+* 2.MCTS_TicTacToe.ipynb : To play Tic-Tac-Toe 3x3 by classic MCTS
+* 3.alphazero-TicTacToe.ipynb : Training of an RL agent to play 3x3 Tic-Tac-Toe
 * 4.alphazero-TicTacToe_6by6_advanced.ipynb : Training of an RL agent to play 6x6 Tic-Tac-Toe
 
 ### Policy files
