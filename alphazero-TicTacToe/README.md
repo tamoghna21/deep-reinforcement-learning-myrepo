@@ -3,7 +3,7 @@ Two RL Agents are trained to play
 * 3x3 Tic-Tac-Toe
 * 6x6 Tic-Tac-Toe with pie rule ( 4 consecutive occupations win)
   
-Each AI player is based on Monte Carlo Tree search guided by a Deep RL agent. The agent is CNN based, takes board position as input. It has two heads, one produces Actions (probabilities for all available Actions)for the input board position, another produces value (it represents the winning chance)for the position. The RL agent outputs guide the Monte Carlo Tree search.
+Each AI player is based on Monte Carlo Tree search guided by a Deep RL agent. The agent is CNN based, takes board position as input. It has two heads, one produces Actions (probabilities for all available Actions)for the input board position, another produces value (it represents the winning chance)for the position. The outputs of the RL agent guide the Monte Carlo Tree search.
 
 ### Notebooks
 * 1.TictacToe - game setup & GUI.ipynb : Game setup and general familiarization.
