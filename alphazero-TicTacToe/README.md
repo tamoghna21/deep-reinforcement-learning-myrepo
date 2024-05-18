@@ -1,4 +1,6 @@
 # Tic-Tac-Toe by Monte Carlo Tree Search guided by Actor-Critic RL Agent (alphazero)
+Play the game [here](https://alphazero-tictactoeapp.streamlit.app/)
+
 Two RL Agents are trained to play
 * 3x3 Tic-Tac-Toe
 * 6x6 Tic-Tac-Toe with pie rule ( 4 consecutive occupations win)
